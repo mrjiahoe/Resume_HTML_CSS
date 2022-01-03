@@ -5,23 +5,25 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
+	font-size: 12px;
+}
+
+* a {
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
 }
 
 body {
-	/* background: lightblue; */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
+	max-width: 21cm;
+	max-height: 29.7cm;
+	margin: auto;
 }
 
 .container {
 	position: relative;
 	width: 100%;
-	max-width: 1000px;
-	min-height: 1000px;
-	margin: 50px;
-	background: #fff;
+	height: 100%;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
@@ -29,8 +31,28 @@ body {
 
 .container .left_side {
 	position: relative;
-	background: #003147;
-	padding: 40px;
+	/* background: #003147; */
+	padding: 20px 20px 40px 30px;
+	background: rgb(14, 9, 121);
+	background: -moz-linear-gradient(
+		39deg,
+		rgba(14, 9, 121, 1) 28%,
+		rgba(55, 45, 224, 1) 63%,
+		rgba(0, 212, 255, 1) 94%
+	);
+	background: -webkit-linear-gradient(
+		39deg,
+		rgba(14, 9, 121, 1) 28%,
+		rgba(55, 45, 224, 1) 63%,
+		rgba(0, 212, 255, 1) 94%
+	);
+	background: linear-gradient(
+		39deg,
+		rgba(14, 9, 121, 1) 28%,
+		rgba(55, 45, 224, 1) 63%,
+		rgba(0, 212, 255, 1) 94%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0979",endColorstr="#00d4ff",GradientType=1);
 }
 
 .profileText {
@@ -38,94 +60,108 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .profileText .imgBx {
 	position: relative;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	overflow: hidden;
+	width: 250px;
+	height: 220px;
 }
 
 .profileText .imgBx img {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .profileText h2 {
 	color: #fff;
-	font-size: 1.5em;
-	margin-top: 20px;
-	text-transform: uppercase;
+	font-size: 2.1rem;
+	margin-top: 1rem;
+	text-transform: capitalize;
 	text-align: center;
 	font-weight: 600;
 	line-height: 1.4em;
 }
 
-.profileText h2 span {
-	font-size: 0.8em;
+.profileText h2:nth-child(3) {
+	margin-top: 0.2rem;
+	font-size: 1.3rem;
 	font-weight: 300;
 }
 
 .contactInfo {
-	padding-top: 40px;
+	padding-top: 1rem;
 }
 
 .title {
-	color: #fff;
+	font-size: 1.75rem;
 	text-transform: uppercase;
 	font-weight: 600;
 	letter-spacing: 1px;
-	margin-bottom: 20px;
-}
-
-.contactInfo ul {
-	position: relative;
+	margin-bottom: 1.2rem;
+	margin-right: 1rem;
+	background-color: #f3ec78;
+	background-image: linear-gradient(45deg, #f3ec78, #af4261);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
 }
 
 .contactInfo ul li {
-	position: relative;
 	list-style: none;
-	margin: 10px 0;
+	margin: 5px 0 8px;
 	cursor: pointer;
+	display: flex;
 }
 
-.contactInfo ul li .icon {
-	display: inline-block;
-	width: 30px;
-	font-size: 18px;
-	color: #03a9f4;
+.contactInfo ul li .new-icon {
+	width: 35px;
+	font-size: 1.8rem;
+	/* color: #03a9f4; */
+	color: gold;
 }
 
-.contactInfo ul li span {
+.contactInfo ul li p {
 	color: #fff;
 	font-weight: 300;
+	font-size: 1.15rem;
+	display: flex;
 }
 
-.contactInfo.education li {
-	margin-bottom: 15px;
+.contactInfo.education ul li {
+	display: grid;
+	margin-bottom: 2rem;
+	cursor: default;
 }
 
 .contactInfo.education h5 {
+	font-size: 1rem;
 	color: #03a9f4;
 	font-weight: 500;
 }
 
 .contactInfo.education h4:nth-child(2) {
+	font-size: 1.2rem;
 	color: #fff;
 	font-weight: 500;
 }
 
 .contactInfo.education h4 {
-	color: #fff;
+	color: rgb(203, 203, 203);
 	font-weight: 300;
+	font-style: italic;
+	font-size: 1rem;
+}
+
+.contactInfo.language p {
+	color: #fff;
+	font-size: 1.2rem;
+	padding-bottom: 5px;
 }
 
 .contactInfo.language .percent {
@@ -190,34 +226,4 @@ p {
 	text-transform: uppercase;
 	color: #2a7da2;
 	font-size: 16px;
-}
-
-.skills .box {
-	position: relative;
-	width: 100%;
-	display: grid;
-	grid-template-columns: 150px 1fr;
-	justify-content: center;
-	align-items: center;
-}
-
-.skills .box h4 {
-	text-transform: uppercase;
-	color: #848c99;
-	font-weight: 500;
-}
-
-.skills .box .percent {
-	position: relative;
-	width: 100%;
-	height: 10px;
-	background: #f0f0f0;
-}
-
-.skills .box .percent div {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	background: #03a9f4;
 }
