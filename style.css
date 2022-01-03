@@ -31,28 +31,28 @@ body {
 
 .container .left_side {
 	position: relative;
-	/* background: #003147; */
+	height: 29.65cm;
 	padding: 20px 20px 40px 30px;
-	background: rgb(14, 9, 121);
+	background: rgb(9, 38, 121);
 	background: -moz-linear-gradient(
 		39deg,
-		rgba(14, 9, 121, 1) 28%,
-		rgba(55, 45, 224, 1) 63%,
-		rgba(0, 212, 255, 1) 94%
+		rgba(9, 38, 121, 1) 28%,
+		rgba(55, 45, 224, 1) 64%,
+		rgba(0, 108, 255, 1) 100%
 	);
 	background: -webkit-linear-gradient(
 		39deg,
-		rgba(14, 9, 121, 1) 28%,
-		rgba(55, 45, 224, 1) 63%,
-		rgba(0, 212, 255, 1) 94%
+		rgba(9, 38, 121, 1) 28%,
+		rgba(55, 45, 224, 1) 64%,
+		rgba(0, 108, 255, 1) 100%
 	);
 	background: linear-gradient(
 		39deg,
-		rgba(14, 9, 121, 1) 28%,
-		rgba(55, 45, 224, 1) 63%,
-		rgba(0, 212, 255, 1) 94%
+		rgba(9, 38, 121, 1) 28%,
+		rgba(55, 45, 224, 1) 64%,
+		rgba(0, 108, 255, 1) 100%
 	);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e0979",endColorstr="#00d4ff",GradientType=1);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#092679",endColorstr="#006cff",GradientType=1);
 }
 
 .profileText {
@@ -128,7 +128,7 @@ body {
 
 .contactInfo ul li p {
 	color: #fff;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 1.15rem;
 	display: flex;
 }
@@ -196,10 +196,19 @@ body {
 }
 
 .title2 {
-	color: #003147;
+	/* color: #003147; */
+	background-color: #07237e;
+	background-image: linear-gradient(60deg, #07237e, #ec0a4a);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin-bottom: 10px;
+	font-size: 1.3rem;
+	border-bottom: 2px solid #07237e;
 }
 
 p {
@@ -213,17 +222,38 @@ p {
 }
 
 .about .box .year_company {
-	min-width: 150px;
+	min-width: 140px;
+	padding-top: 4px;
 }
 
 .about .box .year_company h5 {
 	text-transform: uppercase;
-	color: #848c90;
+	color: #777d80;
 	font-weight: 600;
+}
+
+.about .box .year_company h5:nth-child(2) {
+	text-transform: capitalize;
+	color: #000;
+}
+
+.about .box .text {
+	margin-left: 5px;
 }
 
 .about .box .text h4 {
 	text-transform: uppercase;
 	color: #2a7da2;
 	font-size: 16px;
+}
+
+.about .box .text p {
+	/* color: #2a7da2; */
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+.about .about-me {
+	font-size: 1.2rem;
+	font-weight: 400;
 }
